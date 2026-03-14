@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Spider-Man Palette */
+  --spider-red: #E23636;
+  --spider-blue: #0047AB;
+  --spider-black: #0D1117;
+  --spider-dark-gray: #161B22;
+  --spider-web-white: rgba(255, 255, 255, 0.85);
+
+  /* Neon Highlights */
+  --neon-red: rgba(226, 54, 54, 0.6);
+  --neon-blue: rgba(0, 71, 171, 0.6);
+
+  /* Backgrounds & Panels */
+  --bg-primary: #0a0a0d;
+  --bg-secondary: rgba(22, 27, 34, 0.7);
+  
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  
+  /* Core Spacings */
+  --section-padding: 6rem 2rem;
+  --border-radius: 12px;
+  
+  font-family: 'Outfit', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(226, 54, 54, 0.05), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(0, 71, 171, 0.05), transparent 25%);
+  cursor: none; /* We will use a custom web-trail cursor! */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: none;
+}
+
+a:hover {
+  color: var(--spider-red);
+}
+
+button {
+  cursor: none;
+  font-family: inherit;
+}
+
+/* Glassmorphism Panels styled like comic panels */
+.comic-panel {
+  background: var(--bg-secondary);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.comic-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.comic-panel:hover {
+  border-color: var(--spider-red);
+  box-shadow: 0 0 20px var(--neon-red), inset 0 0 10px rgba(226, 54, 54, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Tech / Neon Glows */
+.glow-text-red {
+  text-shadow: 0 0 10px var(--neon-red);
+}
+
+.glow-text-blue {
+  text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--section-padding);
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: linear-gradient(90deg, var(--spider-red), var(--spider-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50%;
+  height: 4px;
+  background: var(--spider-red);
+  box-shadow: 0 0 10px var(--neon-red);
+}
