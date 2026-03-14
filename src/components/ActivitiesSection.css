@@ -1,0 +1,134 @@
+.activities-section {
+    padding-bottom: 6rem;
+    /* extra padding to separate from contact */
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.leadership-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.activity-card {
+    padding: 2rem;
+    padding-left: 3.5rem;
+    position: relative;
+    border-right: 4px solid var(--spider-red);
+}
+
+.activity-icon-floating {
+    position: absolute;
+    top: 2rem;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-primary);
+    border: 2px solid var(--spider-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--spider-red);
+    box-shadow: 0 0 10px var(--neon-red);
+}
+
+.activity-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+}
+
+.activity-card h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--spider-blue);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.activity-card ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.activity-card li {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.certifications-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-card {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-left: 4px solid var(--spider-blue);
+    background: linear-gradient(135deg, rgba(0, 71, 171, 0.05) 0%, transparent 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-icon-wrapper {
+    background: rgba(0, 71, 171, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 71, 171, 0.3);
+    z-index: 2;
+}
+
+.cert-content {
+    z-index: 2;
+}
+
+.cert-content h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.cert-content p {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.cert-web-bg {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+@media (max-width: 900px) {
+    .activities-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}

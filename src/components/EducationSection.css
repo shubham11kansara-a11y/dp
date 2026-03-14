@@ -1,0 +1,135 @@
+.education-section {
+    padding-top: 6rem;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--spider-red), var(--spider-blue));
+    box-shadow: 0 0 10px rgba(226, 54, 54, 0.4);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 3rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 44px;
+    height: 44px;
+    background: var(--bg-primary);
+    border: 4px solid var(--spider-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--spider-web-white);
+    box-shadow: 0 0 15px var(--neon-red);
+    z-index: 2;
+}
+
+.timeline-content {
+    position: relative;
+    padding: 2rem;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: -15px;
+    border-width: 15px 15px 15px 0;
+    border-style: solid;
+    border-color: transparent rgba(255, 255, 255, 0.05) transparent transparent;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.timeline-header h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6rem;
+    color: var(--text-primary);
+}
+
+.timeline-date {
+    font-family: 'Inter', sans-serif;
+    color: var(--spider-blue);
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    background: rgba(0, 71, 171, 0.1);
+    border: 1px solid rgba(0, 71, 171, 0.3);
+    border-radius: 20px;
+}
+
+.timeline-degree {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.timeline-gpa {
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.timeline-gpa strong {
+    color: var(--spider-red);
+}
+
+.coursework-section strong {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif;
+}
+
+.course-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    list-style: none;
+}
+
+.course-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    background: rgba(22, 27, 34, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: none;
+    /* Keep none for custom cursor */
+}
+
+@media (max-width: 768px) {
+    .timeline-header {
+        flex-direction: column;
+    }
+}

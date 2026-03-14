@@ -1,0 +1,32 @@
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--spider-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    flex-direction: column;
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.spider-web-svg {
+    filter: drop-shadow(0 0 10px var(--neon-red));
+}
+
+.loading-text {
+    font-family: 'Outfit', sans-serif;
+    color: var(--spider-web-white);
+    letter-spacing: 0.2em;
+    font-size: 1.2rem;
+    text-shadow: 0 0 15px var(--spider-blue);
+}
